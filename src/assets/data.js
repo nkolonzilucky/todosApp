@@ -5,6 +5,7 @@ export const data = [
         start: "Today",
         end: "Tomorrow",
         isDone: false,
+        isStarted: false,
         description: "Todo number 1"
         
     },
@@ -14,6 +15,7 @@ export const data = [
         start: "Today",
         end: "Tomorrow",
         isDone: false,
+        isStarted: false,
         description: "Todo number 2"
         
     },
@@ -23,6 +25,7 @@ export const data = [
         start: "Today",
         end: "Tomorrow",
         isDone: false,
+        isStarted: false,
         description: "Todo number 3"
 
     },

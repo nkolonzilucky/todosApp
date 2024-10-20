@@ -11,7 +11,7 @@ export default function App() {
       Todo List
     </h1>
     <ul>
-      {data.map((todo) => <Todo key={todo.id} id={todo.id} title={todo.title} start={todo.start} end={todo.end} isDone={todo.isDone} description={todo.description}  />)}
+      {data.map((todo) => <Todo key={todo.id} id={todo.id} title={todo.title} start={todo.start} end={todo.end} isDone={todo.isDone} description={todo.description} isStarted={todo.isStarted} />)}
     </ul>
       </div>
     </div>

@@ -1,10 +1,12 @@
 import {useState} from 'react';
 
-export default function Todo({ id, title, start, end, isDone, description }) {
-    const [done, setDone] = useState(isDone)
+export default function Todo({ id, title, start, end, isDone, description, isStarted }) {
+    const [done, setDone] = useState(isDone);
+    const [started, setStarted] = useState(isStarted);
     function toggleDone() {
         setDone(!done)
     }
+    
     return(
         <div >
 
@@ -14,7 +16,9 @@ export default function Todo({ id, title, start, end, isDone, description }) {
           <p>Started: {start}</p>
           <p>Ending: {end}</p>
           <p>Depscription: {description}</p>
-          <button className="rounded border px-4 bg-green-400" onClick={toggleDone}>{done ? 'Done' : "started"}</button>
+          <button className="rounded border px-4 bg-blue-600" onClick={() => setStarted(true)}>{started ? 'Started' : "start"}</button>
+          <button className="rounded border px-4 bg-green-400" onClick={toggleDone}>{done ? 'Done' : "Not Done"}</button>
+          <button className="rounded border px-4 bg-red-600" >remove</button>
           <hr />
         </li>
         </div>
